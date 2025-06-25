@@ -1,76 +1,111 @@
-# Java SMS Gateway
+# 🎓 Student Management System (Java)
 
-This project simulates a basic SMS gateway using Java OOP principles.
+[![Java](https://img.shields.io/badge/Java-8%2B-blue?logo=java)](https://www.java.com/) [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](https://github.com/amitkumar-Github8/Student-Management-System)
+
+A simple, interactive, console-based Student Management System implemented in Java using OOP principles. Manage courses, subjects, students, and exams—all from your terminal!
+
+---
+
+## 📋 Table of Contents
+- [Features](#-features)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Usage](#-usage)
+- [Architecture Overview](#-architecture-overview)
+- [How to Extend](#-how-to-extend)
+- [License](#-license)
+- [Contributing](#-contributing)
+
+---
 
 ## 🚀 Features
-- Send and receive SMS between registered users
-- Message validation (e.g., length, phone format)
-- Persistence of messages (file/DB)
-- User inbox and outbox management
-- Unit tests covering core logic
 
-## 🛠 Tech Stack
-- Java 8+
-- OOP design: encapsulation, services, repositories
-- Maven or Gradle build
-- JUnit for testing
-- (Optional) Logging with Log4j or java.util.logging
+✅ Admin login and menu-driven interface  
+✅ Add and manage courses  
+✅ Add subjects to courses  
+✅ Register and view students  
+✅ Exam and grading structure (basic, extendable)  
+✅ In-memory data management (no real database yet)
+
+---
 
 ## 📦 Project Structure
 
 ```
-com.sms.app
-├── model       # Entity classes: Message, User
-├── service     # Core logic: MessageService, UserService
-├── repository  # Storage: SMSRepository
-├── controller  # Orchestration: SMSController
-├── util        # Utilities (e.g., timestamp formatting)
-└── Main.java   # Program entry point
+Student-Management-System/
+├── Admin.java            # Admin user logic and menu
+├── Course.java           # Course entity and subject management
+├── DatabaseConnection.java # Placeholder for DB logic
+├── Exam.java             # Exam entity
+├── ExamUtils.java        # Exam grading utility
+├── Main.java             # Program entry point
+├── Student.java          # Student entity and logic
+├── Subject.java          # Subject entity
+├── User.java             # Base user class
+└── README.md             # Project documentation
 ```
+
+---
+
+## 🏁 Getting Started
+
+> **Tip:** You only need Java 8+ and a terminal to run this project!
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/amitkumar-Github8/Student-Management-System.git
+   cd Student-Management-System
+   ```
+2. **Compile all Java files:**
+   ```bash
+   javac *.java
+   ```
+3. **Run the application:**
+   ```bash
+   java Main
+   ```
+
+---
 
 ## 👍 Usage
 
-1. Ensure Java 8+ and Maven/Gradle installed  
-2. Clone the repo:
+- Follow the on-screen menu to add courses, subjects, and students.
+- All data is stored in memory (no database required).
+- To exit, use the logout option in the menu.
 
-   ```bash
-   git clone https://github.com/Abhidroid87/SMS.git
-   cd SMS
-   ```
+---
 
-3. Build the project:
+## 🏗 Architecture Overview
 
-   **Maven**  
-   `mvn clean install`
+| Component         | Responsibility                                 |
+|-------------------|------------------------------------------------|
+| **Admin**         | Manages courses, subjects, and students        |
+| **Course**        | Contains course name and subjects              |
+| **Subject**       | Represents a subject in a course               |
+| **Student**       | Represents a student (see Student.java)        |
+| **Exam/ExamUtils**| Structure for exams and grading                |
+| **DatabaseConnection** | Placeholder for future DB integration      |
+| **User**          | Base class for Admin and Student               |
 
-   **Gradle**  
-   `gradle build`
+---
 
-4. Run:
+## 💡 How to Extend
 
-   `java -cp target/SMS-1.0-SNAPSHOT.jar com.sms.app.Main`
+> 💬 **Ideas:**
+> - Implement real database storage (see `DatabaseConnection.java`)
+> - Add authentication for users
+> - Expand exam and grading features
+> - Add a GUI (Swing/JavaFX)
+> - Add unit tests
 
-5. (Optional) Run tests:
+---
 
-   `mvn test` or `gradle test`
+## 📄 License
 
-## 📐 Architecture Overview
+This project is for educational purposes. See LICENSE if present in the repo.
 
-- **Controller**: Accepts user input (CLI/UI)
-- **Services**: Business logic for message/user management
-- **Repository**: Persistence layer
-- **Models**: Data representation of messages and users
+---
 
-## 🧪 Testing
+## 🤝 Contributing
 
-- Unit tests cover:
-  - Message validation (length, phone format)
-  - Message sending/receiving
-  - User registration and message listing
-
-## ✏ Extend
-
-- Add delivery reports or scheduled messages
-- Replace file-based storage with database (SQLite)
-- Implement GUI with Swing or JavaFX
-- Add authentication for users
+Pull requests and suggestions are welcome! Feel free to open an issue or submit a PR.
