@@ -1,4 +1,3 @@
-// User.java
 public abstract class User {
     protected String name;
     protected String email;
@@ -8,5 +7,6 @@ public abstract class User {
         this.email = email;
     }
 
-    public abstract void displayMenu();
+    public String getName() { return name; }
+    public String getEmail() { return email; }
 }

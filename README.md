@@ -1,55 +1,57 @@
 # 🎓 Student Management System (Java)
 
-[![Java](https://img.shields.io/badge/Java-8%2B-blue?logo=java)](https://www.java.com/) [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen)](https://github.com/amitkumar-Github8/Student-Management-System)
-
-A simple, interactive, console-based Student Management System implemented in Java using OOP principles. Manage courses, subjects, students, and exams—all from your terminal!
+Welcome to the **Student Management System**!  
+This is a simple, interactive, console-based Java application that lets you manage courses, students, and exams—all from your terminal.  
+Whether you're an admin or a student, you'll find the menu-driven interface easy and intuitive.
 
 ---
 
 ## 📋 Table of Contents
-- [Features](#-features)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Usage](#-usage)
-- [Architecture Overview](#-architecture-overview)
-- [How to Extend](#-how-to-extend)
-- [License](#-license)
-- [Contributing](#-contributing)
+- [✨ Features](#-features)
+- [🗂 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+- [💡 Usage](#-usage)
+- [🏗 Architecture Overview](#-architecture-overview)
+- [🔧 How to Extend](#-how-to-extend)
+- [🖥️ Example Usage](#️-example-usage)
+- [🛠️ Troubleshooting](#-troubleshooting)
+- [📄 License](#-license)
+- [🤝 Contributing](#-contributing)
+- [📫 Contact](#-contact)
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
 ✅ Admin login and menu-driven interface  
 ✅ Add and manage courses  
-✅ Add subjects to courses  
 ✅ Register and view students  
-✅ Exam and grading structure (basic, extendable)  
-✅ In-memory data management (no real database yet)
+✅ Enroll students in courses  
+✅ Take simple exams (random grading)  
+✅ In-memory data management (no database required)
 
 ---
 
-## 📦 Project Structure
+## 🗂 Project Structure
 
 ```
 Student-Management-System/
-├── Admin.java            # Admin user logic and menu
-├── Course.java           # Course entity and subject management
-├── DatabaseConnection.java # Placeholder for DB logic
-├── Exam.java             # Exam entity
-├── ExamUtils.java        # Exam grading utility
-├── Main.java             # Program entry point
-├── Student.java          # Student entity and logic
-├── Subject.java          # Subject entity
-├── User.java             # Base user class
-└── README.md             # Project documentation
+├── src/
+│   ├── Admin.java
+│   ├── Course.java
+│   ├── DatabaseConnection.java
+│   ├── ExamUtils.java
+│   ├── Main.java
+│   ├── Student.java
+│   └── User.java
+└── README.md
 ```
 
 ---
 
-## 🏁 Getting Started
+## 🚀 Getting Started
 
-> **Tip:** You only need Java 8+ and a terminal to run this project!
+> **Requirements:** Java 8+ and a terminal.
 
 1. **Clone the repo:**
    ```bash
@@ -58,20 +60,21 @@ Student-Management-System/
    ```
 2. **Compile all Java files:**
    ```bash
-   javac *.java
+   javac src/*.java
    ```
 3. **Run the application:**
    ```bash
-   java Main
+   java -cp src Main
    ```
 
 ---
 
-## 👍 Usage
+## 💡 Usage
 
-- Follow the on-screen menu to add courses, subjects, and students.
+- **Admin:** Add/view courses, enroll students, view students.
+- **Student:** View/enroll in courses, take exams.
 - All data is stored in memory (no database required).
-- To exit, use the logout option in the menu.
+- To exit, use the logout or exit option in the menu.
 
 ---
 
@@ -79,33 +82,67 @@ Student-Management-System/
 
 | Component         | Responsibility                                 |
 |-------------------|------------------------------------------------|
-| **Admin**         | Manages courses, subjects, and students        |
-| **Course**        | Contains course name and subjects              |
-| **Subject**       | Represents a subject in a course               |
-| **Student**       | Represents a student (see Student.java)        |
-| **Exam/ExamUtils**| Structure for exams and grading                |
+| **Admin**         | Manages courses and students                   |
+| **Course**        | Represents a course                            |
+| **Student**       | Represents a student and their enrollments     |
+| **ExamUtils**     | Utility for grading exams                      |
 | **DatabaseConnection** | Placeholder for future DB integration      |
 | **User**          | Base class for Admin and Student               |
 
 ---
 
-## 💡 How to Extend
+## 🔧 How to Extend
 
-> 💬 **Ideas:**
-> - Implement real database storage (see `DatabaseConnection.java`)
-> - Add authentication for users
-> - Expand exam and grading features
-> - Add a GUI (Swing/JavaFX)
-> - Add unit tests
+- Implement real database storage (see `DatabaseConnection.java`)
+- Add authentication for users
+- Expand exam and grading features
+- Add a GUI (Swing/JavaFX)
+- Add unit tests
+
+---
+
+## 🖥️ Example Usage
+
+**Admin Perspective:**
+1. Login as admin.
+2. Add a new course: `CS101 - Intro to Computer Science`
+3. Register a new student: `John Doe`
+4. Enroll John in CS101
+5. Log out.
+
+**Student Perspective:**
+1. Login as student.
+2. View available courses.
+3. Enroll in CS101.
+4. Take the exam for CS101.
+5. Log out.
 
 ---
 
-## 📄 License
+## 🛠️ Troubleshooting
 
-This project is for educational purposes. See LICENSE if present in the repo.
+- **Issue:** Can't connect to the database.  
+  **Solution:** Ensure the database server is running and the connection details in `DatabaseConnection.java` are correct.
+
+- **Issue:** Compilation errors.  
+  **Solution:** Make sure you have Java 8+ installed and properly set up in your system's PATH.
+
+- **Issue:** Application not starting.  
+  **Solution:** Check if all Java files are compiled. Run `javac src/*.java` again to compile any missed files.
 
 ---
+
 
 ## 🤝 Contributing
 
 Pull requests and suggestions are welcome! Feel free to open an issue or submit a PR.
+
+---
+
+## 📫 Contact
+
+For any inquiries or feedback, please contact the project maintainer:
+
+**Amit Kumar**  
+Email: amitkumar@example.com  
+GitHub: [amitkumar-Github8](https://github.com/amitkumar-Github8)
